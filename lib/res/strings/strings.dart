@@ -1,0 +1,51 @@
+abstract class Strings {
+  String get home;
+
+  String get appName;
+
+  String get tagline;
+
+  String get welcome;
+
+  String get signInSubText;
+
+  String get invalidUser;
+
+  String get noAccountEmail;
+
+  String get language;
+
+  String get langEnglish;
+
+  String get langHindi;
+
+  String get signIn;
+
+  String get signInHeader;
+
+  String get emailLabel;
+
+  String get emailPlaceholder;
+
+  String get passwordLabel;
+  
+  String get usernameLabel;
+
+  String get passwordPlaceholder;
+
+  String get raiseTripText;
+
+  String get changeLanguageNavItem;
+
+  String get logoutNavItem;
+
+  String get appVersion;
+
+  String get activityHeaderText;
+
+  String get coolButtonTitle;
+
+  String get buttonYesTitle;
+
+  String get buttonNoTitle;
+}
