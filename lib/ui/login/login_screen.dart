@@ -15,6 +15,7 @@ import 'bloc/login_state.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginBloc? bloc;
+  LoginBloc? bloc1;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   bool isLoading = false;
   TextEditingController usernameController = TextEditingController();
