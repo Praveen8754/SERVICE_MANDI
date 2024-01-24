@@ -48,4 +48,7 @@ abstract class Strings {
   String get buttonYesTitle;
 
   String get buttonNoTitle;
+
+
+  String get hiThere;
 }

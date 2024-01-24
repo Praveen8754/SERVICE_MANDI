@@ -78,4 +78,7 @@ class EnglishStrings extends Strings {
 
   @override
   String get buttonNoTitle => "No";
+
+  @override
+  String get hiThere => "Hi there!";
 }

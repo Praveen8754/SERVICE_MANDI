@@ -5,7 +5,7 @@ class AppDrawables extends Drawables {
   String get appLogo => "${imageBasePath}appLogo.png";
 
   @override
-  String get appLogoGro => "${imageBasePath}appLogo_gro.png";
+  String get logoSmall => "${imageBasePath}logo_small.png";
 
   @override
   String get loginAnimation => "${jsonBasePath}login_anim.json";
@@ -27,5 +27,4 @@ class AppDrawables extends Drawables {
 
   @override
   String get mapViewImage => "${imageBasePath}map_view.png";
-
 }

@@ -5,7 +5,7 @@ abstract class Drawables {
   String iconBasePath ="assets/icons/";
 
   String get appLogo;
-  String get appLogoGro;
+  String get logoSmall;
   String get loginAnimation;
 
   String get icGithub;

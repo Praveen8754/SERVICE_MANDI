@@ -76,4 +76,8 @@ class HindiStrings extends Strings {
 
   @override
   String get buttonNoTitle => "No";
+
+  @override
+  // TODO: implement hiThere
+  String get hiThere => throw UnimplementedError();
 }

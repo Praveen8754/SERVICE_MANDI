@@ -3,10 +3,22 @@ import 'package:gro_stellar_renewed/routes/routes.dart';
 import 'package:gro_stellar_renewed/ui/home/home_screen.dart';
 import '../ui/Login/login_screen.dart';
 import '../ui/Splash/splash_screen.dart';
+import '../ui/carosual/carosual_screen.dart';
+import '../ui/carosual/carosual_screen.dart';
 
 class RouteGenerator {
   Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
+
+      case Routes.carosuelScreen:
+        return MaterialPageRoute(
+          builder: (context) {
+            return CarosualScreen();
+          },
+        );
+
+
+
       case Routes.splashScreen:
         return MaterialPageRoute(
           builder: (context) {

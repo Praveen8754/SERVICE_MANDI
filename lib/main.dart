@@ -62,7 +62,7 @@ class MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: context.resources.color.colorPrimary,
       ),
-      initialRoute: Routes.splashScreen,
+      initialRoute: Routes.carosuelScreen,
       onGenerateRoute: RouteGenerator().generateRoute,
       locale: _locale,
       supportedLocales: const [

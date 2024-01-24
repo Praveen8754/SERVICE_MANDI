@@ -60,15 +60,25 @@ class LoginScreen extends StatelessWidget {
                       child: Container(
                         height: MediaQuery.of(context).size.height * 0.45,
                         width: MediaQuery.of(context).size.width * 0.85,
-                        color: AppColors().white,
+                        color: AppColors().statsCardSeparatorColor,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            
+
+                         //   Text(h)
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             Image(
                                 height: 100,
                                 width: 100,
                                 image: AssetImage(
-                                    context.resources.drawable.appLogoGro)),
+                                    context.resources.drawable.logoSmall)),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: AppWidgets.getTextField(

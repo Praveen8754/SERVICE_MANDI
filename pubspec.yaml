@@ -45,6 +45,10 @@ dependencies:
   connectivity_plus: ^5.0.2
   url_launcher: ^6.1.6
   fluttertoast: ^8.2.1
+  carousel_slider: ^4.2.1
+  flutter_carousel_widget: ^2.2.0
+  carousel_indicator: ^1.0.6
+  palette_generator: ^0.3.3+3
 
 
 dev_dependencies:
