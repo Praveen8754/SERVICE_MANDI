@@ -59,10 +59,11 @@ class MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: context.resources.color.colorPrimary,
       ),
-      initialRoute: Routes.carosuelScreen,
+      initialRoute: Routes.otpScreen,
       onGenerateRoute: RouteGenerator().generateRoute,
       locale: _locale,
       supportedLocales: const [

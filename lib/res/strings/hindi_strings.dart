@@ -77,7 +77,41 @@ class HindiStrings extends Strings {
   @override
   String get buttonNoTitle => "No";
 
+
+
   @override
-  // TODO: implement hiThere
-  String get hiThere => throw UnimplementedError();
+  // TODO: implement version
+  String get version => throw UnimplementedError();
+
+  @override
+  // TODO: implement hiThereText
+  String get hiThereText => throw UnimplementedError();
+
+  @override
+  // TODO: implement letsgetstartedText
+  String get letsgetstartedText => throw UnimplementedError();
+
+  @override
+  // TODO: implement selectyourpreferredlanguage
+  String get selectyourpreferredlanguage => throw UnimplementedError();
+  String get english => "English";
+  String get thamizh => "தமிழ்";
+  @override
+  String get hindi => "हिंदी";
+
+  @override
+  // TODO: implement enteryourmobilenumber
+  String get enteryourmobilenumber => throw UnimplementedError();
+
+  @override
+  // TODO: implement requestotp
+  String get requestotp => throw UnimplementedError();
+
+  @override
+  // TODO: implement enterthemobilenumber
+  String get enterthemobilenumber => throw UnimplementedError();
+
+  @override
+  // TODO: implement welcometoservicemandi
+  String get welcometoservicemandi => throw UnimplementedError();
 }

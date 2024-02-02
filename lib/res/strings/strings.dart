@@ -50,5 +50,15 @@ abstract class Strings {
   String get buttonNoTitle;
 
 
-  String get hiThere;
+  String get hiThereText;
+  String get version;
+  String get letsgetstartedText;
+  String get selectyourpreferredlanguage;
+  String get english;
+  String get hindi;
+  String get thamizh;
+  String get enteryourmobilenumber;
+  String get requestotp;
+  String get enterthemobilenumber;
+  String get welcometoservicemandi;
 }

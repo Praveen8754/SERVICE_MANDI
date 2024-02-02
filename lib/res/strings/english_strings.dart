@@ -80,5 +80,28 @@ class EnglishStrings extends Strings {
   String get buttonNoTitle => "No";
 
   @override
-  String get hiThere => "Hi there!";
+  String get hiThereText => "Hi there!";
+
+  @override
+  String get version => "v01.2022.01";
+  @override
+  String get letsgetstartedText => "Let's get started.";
+  @override
+  String get selectyourpreferredlanguage => "Select your preferred language.";
+  @override
+  String get english => "English";
+  @override
+  String get hindi => "हिंदी";
+  @override
+  String get thamizh => "தமிழ்";
+  @override
+  String get enteryourmobilenumber => "Enter your mobile number";
+  @override
+  String get requestotp => "Request OTP";
+  @override
+  String get enterthemobilenumber => "Enter the Mobile Number";
+  @override
+  String get welcometoservicemandi => "Welcome to Service Mandi";
+
+
 }

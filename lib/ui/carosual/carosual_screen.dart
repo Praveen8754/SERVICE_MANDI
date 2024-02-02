@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:gro_stellar_renewed/res/app_context_extension.dart';
 
 import 'bloc/carosual_bloc.dart';
 
@@ -17,8 +17,6 @@ class CarosualScreen extends StatelessWidget {
       create: (context) => CarosualScreenBloc(),
       child: _buildBody(context),
     );
-
-
   }
 
   Widget buildDotIndicator(int index, int currentIndex) {
@@ -52,42 +50,46 @@ class CarosualScreen extends StatelessWidget {
                 items: [
                   // Your carousel items go here
                   Center(
-                    child: Padding(
-                      padding: EdgeInsets.fromLTRB(
-                          0, MediaQuery.of(context).size.height / 24, 0,  MediaQuery.of(context).size.height / 22.5),
-                      child: Image.asset(
-                        'assets/images/wel1.png',
-                        height: MediaQuery.sizeOf(context).height /1,
-                         width: MediaQuery.sizeOf(context).width / 1.3,
-                        scale: 0.2,
-                      ),
+                    child: Container(
+                      height: MediaQuery.sizeOf(context).height/2,
+                      width: MediaQuery.sizeOf(context).width / 1.3,
+                      child: Image(
+                        image: AssetImage(
+                          context.resources.drawable.wel1,
+                          /* height: MediaQuery.sizeOf(context).height ,
+                          width: MediaQuery.sizeOf(context).width / 1.3,
+                          scale: 2,*/
+                        ),
+                    // fit: BoxFit.cover,
+                    // height:MediaQuery.sizeOf(context).height*7.5 ,
+                          ),
+
+                    ),
+                  ),
+                  Center(
+                    child: Container(
+                      height: MediaQuery.sizeOf(context).height/1.5 ,
+                      width:MediaQuery.sizeOf(context).width/1.3 ,
+                      child: Image(
+                          image: AssetImage(
+
+                        context.resources.drawable.wel2,
+                      )),
                     ),
                   ),
                   Center(
                     child: Column(children: [
                       Padding(
                         padding: EdgeInsets.fromLTRB(
-                            0, MediaQuery.of(context).size.height / 3.3, 0, 0),
-                        child: Image.asset(
-                          'assets/images/wel2.png',
-                          height: MediaQuery.sizeOf(context).height / 2.3,
-                          // width: MediaQuery.sizeOf(context).width / 2,
-                          scale: 2.5,
-                         ),
-                        ),
-                    ]),
-                  ),
-                  Center(
-                    child: Column(children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(
-                            MediaQuery.sizeOf(context).width / 7.5, MediaQuery.sizeOf(context).height / 6.5, MediaQuery.sizeOf(context).width / 12.5,0),
+                            MediaQuery.sizeOf(context).width / 7.5,
+                            MediaQuery.sizeOf(context).height / 6.5,
+                            MediaQuery.sizeOf(context).width / 12.5,
+                            0),
                         child: Image.asset(
                           'assets/images/wel3.png',
                           height: MediaQuery.sizeOf(context).height / 1.4,
-
                           scale: 0.9,
-                      ),
+                        ),
                       )
                     ]),
                   ),
@@ -100,7 +102,7 @@ class CarosualScreen extends StatelessWidget {
                           'assets/images/wel4.png',
                           height: MediaQuery.sizeOf(context).height / 2.5,
                           scale: 2.5,
-                                              ),
+                        ),
                       )
                     ]),
                   ),
@@ -172,7 +174,5 @@ class CarosualScreen extends StatelessWidget {
         );
       },
     );
-
-
   }
 }

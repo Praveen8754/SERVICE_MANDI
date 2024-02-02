@@ -27,4 +27,19 @@ class AppDrawables extends Drawables {
 
   @override
   String get mapViewImage => "${imageBasePath}map_view.png";
+
+  @override
+  String get wel1 => "${imageBasePath}wel1.png";
+
+  @override
+  String get wel2 => "${imageBasePath}wel2.png";
+
+  @override
+  String get wel3 => "${imageBasePath}wel3.png";
+
+  @override
+  String get wel4 => "${imageBasePath}wel4.png";
+
+  @override
+  String get logobig => "${imageBasePath}logo_big.png";
 }

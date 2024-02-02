@@ -10,6 +10,20 @@ class AppStyle {
       fontWeight: FontWeight.normal,
       color: AppColors().colorPrimaryText);
 
+
+  TextStyle hithere = TextStyle(
+      fontFamily: 'Poppins',
+      fontSize: AppDimension().defaultText,
+      fontWeight: FontWeight.normal,
+      color: AppColors().white);
+
+
+
+
+
+
+
+
   TextStyle loginHeadingTextStyle = TextStyle(
       fontFamily: 'Poppins',
       fontSize: AppDimension().mediumText,

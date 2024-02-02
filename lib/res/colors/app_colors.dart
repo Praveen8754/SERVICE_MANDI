@@ -75,4 +75,7 @@ class AppColors implements BaseColors{
 
   @override
   Color get sliderBGColor => const Color(0xff0075fa);
+
+  @override
+  Color get orange =>  Colors.orange/*const Color.fromRGBO(255, 115, 0, 255)*/;
 }

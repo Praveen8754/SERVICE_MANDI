@@ -30,5 +30,6 @@ abstract class BaseColors{
   Color get sliderBGColor;
   Color get black;
   Color get white;
+  Color get orange;
 
 }

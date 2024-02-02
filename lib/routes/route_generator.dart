@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gro_stellar_renewed/routes/routes.dart';
 import 'package:gro_stellar_renewed/ui/home/home_screen.dart';
+import 'package:gro_stellar_renewed/ui/otp/otp_screen.dart';
+import 'package:gro_stellar_renewed/ui/otpfetch/otpfetch_screen.dart';
+import 'package:gro_stellar_renewed/ui/preferred_language/preferred_language_screen.dart';
 import '../ui/Login/login_screen.dart';
 import '../ui/Splash/splash_screen.dart';
 import '../ui/carosual/carosual_screen.dart';
@@ -14,6 +17,29 @@ class RouteGenerator {
         return MaterialPageRoute(
           builder: (context) {
             return CarosualScreen();
+          },
+        );
+
+      case Routes.preferredlanguageScreen:
+        return MaterialPageRoute(
+          builder: (context) {
+            return Preferred_languagescreen();
+          },
+        );
+
+
+      case Routes.otpfetchScreen:
+        return MaterialPageRoute(
+          builder: (context) {
+            return OtpfetchScreen();
+          },
+        );
+
+
+      case Routes.otpScreen:
+        return MaterialPageRoute(
+          builder: (context) {
+            return OtpScreen();
           },
         );
 

@@ -5,6 +5,7 @@ abstract class Dimensions{
   double get mediumText;
   double get defaultText;
   double get bigText;
+
   //define padding-margin
   double get verySmallMargin;
   double get smallMargin;
