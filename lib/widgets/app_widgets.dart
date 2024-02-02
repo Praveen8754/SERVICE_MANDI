@@ -62,6 +62,7 @@ class AppWidgets {
   ) {
 
       return Visibility(
+
         visible: showoverlay,
         child: Container(
           width: MediaQuery.of(context).size.width,
