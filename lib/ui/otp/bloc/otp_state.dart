@@ -4,6 +4,7 @@ part of 'otp_bloc.dart';
 abstract class OtpState {}
 
 class OtpInitial extends OtpState {}
+class LoadingState extends OtpState {}
 
 class MobileNumberValid extends OtpState {}
 

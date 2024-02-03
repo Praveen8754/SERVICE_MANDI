@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gro_stellar_renewed/routes/routes.dart';
 import 'package:gro_stellar_renewed/ui/home/home_screen.dart';
+import 'package:gro_stellar_renewed/ui/hometab/hometab_screen.dart';
 import 'package:gro_stellar_renewed/ui/otp/otp_screen.dart';
 import 'package:gro_stellar_renewed/ui/otpfetch/otpfetch_screen.dart';
 import 'package:gro_stellar_renewed/ui/preferred_language/preferred_language_screen.dart';
@@ -34,6 +35,19 @@ class RouteGenerator {
             return OtpfetchScreen();
           },
         );
+
+
+
+      case Routes.hometabScreen:
+        return MaterialPageRoute(
+          builder: (context) {
+            return HometabScreen();
+          },
+        );
+
+
+
+
 
 
       case Routes.otpScreen:

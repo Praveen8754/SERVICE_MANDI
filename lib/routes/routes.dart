@@ -6,4 +6,6 @@ class Routes{
   static const String preferredlanguageScreen = "preferredlanguage_screen";
   static const String otpScreen = "otp_screen";
   static const String otpfetchScreen = "otpfetch_screen";
+  static const String hometabScreen = "hometab_screen";
+
 }

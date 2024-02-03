@@ -25,71 +25,100 @@ class OtpScreen extends StatelessWidget {
       listener: (context, state) {},
       builder: (context, state) {
         bloc = BlocProvider.of<OtpBloc>(context);
-        return Scaffold(
-            backgroundColor: AppColors().orange,
-            appBar: AppBar(
+        return Stack(
+          children: [
+            Scaffold(
               backgroundColor: AppColors().orange,
+              appBar: AppBar(
+                backgroundColor: AppColors().orange,
+              ),
+              body: Container(
+                  child: Padding(
+                      padding: EdgeInsets.all(MediaQuery
+                          .of(context)
+                          .size
+                          .width / 20),
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(context.resources.strings!.hiThereText, style:AppStyle().hithere/*TextStyle(color: AppColors().white,  ),*/),
+                            Text(context.resources.strings!.letsgetstartedText, style: TextStyle(color: AppColors().white)),
+                            Center(
+                              child: Image(
+
+                                  height: MediaQuery
+                                      .of(context)
+                                      .size
+                                      .height / 4,
+                                  width: MediaQuery
+                                      .of(context)
+                                      .size
+                                      .width / 4,
+                                  image:
+                                  AssetImage(context.resources.drawable.logobig)),
+                            ),
+                            AppWidgets.getTextFieldWithonChanged(
+                                context,
+                                phonenumber,
+                                context.resources.strings!.enterthemobilenumber,
+                                bloc!
+
+                              /*    onChanged: (text) {
+                              setState(() {
+
+
+                                // Check your conditions here
+                                if (text.length >= 5) {
+                                  _isButtonEnabled = true;
+                                } else {
+                                  _isButtonEnabled = false;
+                                }*/
+                            ),
+                            SizedBox(height: MediaQuery.of(context).size.height/10,),
+          Container(
+            child: state is MobileNumberValid ?
+
+
+
+            AppWidgets.buttonWithStateManage(context, state, ):
+            Container(
+              // height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: Image(
+                  height: MediaQuery.of(context).size.height/10,
+                  width: MediaQuery.of(context).size.width/10,
+                  image: AssetImage(
+                      context.resources.drawable.requestotphide)),
             ),
-            body: Container(
-                child: Padding(
-                    padding: EdgeInsets.all(MediaQuery
-                        .of(context)
-                        .size
-                        .width / 20),
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(context.resources.strings!.hiThereText, style:AppStyle().hithere/*TextStyle(color: AppColors().white,  ),*/),
-                          Text(context.resources.strings!.letsgetstartedText, style: TextStyle(color: AppColors().white)),
-                          Center(
-                            child: Image(
-
-                                height: MediaQuery
-                                    .of(context)
-                                    .size
-                                    .height / 4,
-                                width: MediaQuery
-                                    .of(context)
-                                    .size
-                                    .width / 4,
-                                image:
-                                AssetImage(context.resources.drawable.logobig)),
-                          ),
-                          AppWidgets.getTextFieldWithonChanged(
-                              context,
-                              phonenumber,
-                              context.resources.strings!.enterthemobilenumber,
-                              bloc!
-
-                            /*    onChanged: (text) {
-                            setState(() {
-
-
-                              // Check your conditions here
-                              if (text.length >= 5) {
-                                _isButtonEnabled = true;
-                              } else {
-                                _isButtonEnabled = false;
-                              }*/
-                          ),
-                          SizedBox(height: MediaQuery.of(context).size.height/10,),
-
-                          AppWidgets.buttonWithStateManage(context, state),
+          ),
+                        /*   state is MobileNumberValid ? AppWidgets.buttonWithStateManage(context, state, ):
+                           Container(
+                            // height: MediaQuery.of(context).size.height,
+                             width: MediaQuery.of(context).size.width,
+                             child: Image(
+                                 height: MediaQuery.of(context).size.height/10,
+                                 width: MediaQuery.of(context).size.width/10,
+                                 image: AssetImage(
+                                     context.resources.drawable.requestotphide)),
+                           ),*/
+                            /*AppWidgets.requestotpimageoverlay(context, state, ),*/
 
 
 
-                         /* ElevatedButton(
-                            onPressed: (state is MobileNumberValid) ? () {
-                              // Handle button press here
-                              print('Button pressed');
-                            } : null,
-                            child: Text(context.resources.strings!.requestotp),
-                          ),*/
-                        ]
-                    )
-                )
+                           /* ElevatedButton(
+                              onPressed: (state is MobileNumberValid) ? () {
+                                // Handle button press here
+                                print('Button pressed');
+                              } : null,
+                              child: Text(context.resources.strings!.requestotp),
+                            ),*/
+                          ]
+                      )
+                  )
 
-            )
+              )
+          ),
+        ]
         );
       }
     );

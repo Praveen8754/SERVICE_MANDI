@@ -78,4 +78,7 @@ class AppColors implements BaseColors{
 
   @override
   Color get orange =>  Colors.orange/*const Color.fromRGBO(255, 115, 0, 255)*/;
+  @override
+  Color get grey =>  Colors.grey/*const Color.fromRGBO(255, 115, 0, 255)*/;
+
 }

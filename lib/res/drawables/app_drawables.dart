@@ -42,4 +42,7 @@ class AppDrawables extends Drawables {
 
   @override
   String get logobig => "${imageBasePath}logo_big.png";
+
+  @override
+  String get requestotphide => "${imageBasePath}requestotphide.png";
 }

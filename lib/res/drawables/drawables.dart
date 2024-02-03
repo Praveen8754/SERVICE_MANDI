@@ -12,6 +12,7 @@ abstract class Drawables {
   String get wel3;
   String get wel4;
   String get logobig;
+  String get requestotphide;
 
 
   String get icGithub;

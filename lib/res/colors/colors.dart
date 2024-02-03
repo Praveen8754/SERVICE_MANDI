@@ -31,5 +31,6 @@ abstract class BaseColors{
   Color get black;
   Color get white;
   Color get orange;
+  Color get grey;
 
 }

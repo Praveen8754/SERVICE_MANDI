@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:gro_stellar_renewed/res/app_context_extension.dart';
 import 'package:gro_stellar_renewed/res/colors/app_colors.dart';
+import 'package:gro_stellar_renewed/ui/otpfetch/bloc/otpfetch_bloc.dart';
 
 import '../res/styles/app_styles.dart';
 import '../ui/otp/bloc/otp_bloc.dart';
@@ -58,35 +59,35 @@ class AppWidgets {
   static buttonWithStateManage(
     BuildContext context,
     OtpState state,
-      bool showoverlay
   ) {
-
-      return Visibility(
-
-        visible: showoverlay,
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          decoration: BoxDecoration(
-            color: AppColors().black,
-            border: Border.all(
-              color: AppColors().black, // Border color
-              width: MediaQuery.of(context).size.width / 100, // Border width
-            ),
-            borderRadius: BorderRadius.circular(0),
+    bool showoverlay = state is MobileNumberValid ? true : false;
+    return Visibility(
+      visible: showoverlay,
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          color: AppColors().black,
+          border: Border.all(
+            color: AppColors().black, // Border color
+            width: MediaQuery.of(context).size.width / 100, // Border width
           ),
-          child: MaterialButton(
-            onPressed:   (state is MobileNumberValid) ? () {
-              // Handle button press here
-              print('Button pressed');
-            } : null,
-            child: Text(
-              context.resources.strings!.requestotp,
-              style: TextStyle(color: AppColors().white),
-            ),
+          borderRadius: BorderRadius.circular(0),
+        ),
+        child: MaterialButton(
+          onPressed: (state is MobileNumberValid)
+              ? () {
+                  // Handle button press here
+                  print('Button pressed');
+                }
+              : null,
+          child: Text(
+            context.resources.strings!.requestotp,
+            style: TextStyle(color: AppColors().white),
           ),
         ),
-      );
-   /*{
+      ),
+    );
+    /*{
       return Container(
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
@@ -106,6 +107,19 @@ class AppWidgets {
       );
     }*/
   }
+
+
+  static requestotpimageoverlay(BuildContext context , OtpState state){
+    bool showoverlay = state is MobileNumberInvalid ? true : false;
+    return Visibility(
+        visible: showoverlay,
+        child:  Image(
+        height: MediaQuery.of(context).size.height/5,
+        width: MediaQuery.of(context).size.width/5,
+        image: AssetImage(
+        context.resources.drawable.requestotphide)));
+  }
+
 
   static getAppBarWithSingleIcon(
       BuildContext context, String title, Function() callback, Icon iconData) {
@@ -216,6 +230,78 @@ class AppWidgets {
       ),
     );
   }
+
+
+  static getTextFieldOTPCheckWithonChanged(BuildContext context,
+      int otp, String hint, OtpfetchBloc bloc) {
+    var controller = TextEditingController();
+    controller.text=otp.toString();
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height / 20,
+      color: AppColors().white,
+      child: Padding(
+        padding: EdgeInsets.fromLTRB( MediaQuery.of(context).size.width/30, 0, 0, 0),
+        child: TextFormField(
+          controller: controller,
+          onChanged: (otp) {
+            bloc.add(OTPChanged(otp));
+          },
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            // prefix: const Icon(Icons.phone_android),
+            filled: true,
+            fillColor: AppColors().white,
+            icon: const Icon(
+              Icons.key,
+              color: Colors.black,
+            ),
+
+            hintText: hint,
+          ),
+          keyboardType: TextInputType.phone,
+        ),
+      ),
+    );
+  }
+
+
+
+
+  static getTextFieldWithNoonChanged (BuildContext context,
+      String username) {
+    var controller=TextEditingController();
+    controller.text=username;
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height / 20,
+      color: AppColors().grey,
+      child: Padding(
+        padding: EdgeInsets.all(MediaQuery.of(context).size.width / 40),
+        child: TextFormField(
+          controller: controller,
+
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            // prefix: const Icon(Icons.phone_android),
+            filled: true,
+            fillColor: AppColors().grey,
+            icon: const Icon(
+              Icons.person,
+              color: Colors.black,
+            ),
+
+
+          ),
+          keyboardType: TextInputType.phone,
+        ),
+      ),
+    );
+  }
+
+
 
   static getCenterLoadingView(BuildContext context) {
     return CircularProgressIndicator(
