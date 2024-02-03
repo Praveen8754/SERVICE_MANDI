@@ -111,7 +111,12 @@ class OtpfetchScreen extends StatelessWidget {
                     SizedBox(height: MediaQuery.of(context).size.height/30),
                     Padding(padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width/1.8, 0, MediaQuery.of(context).size.width/600, 0) ,
                       child: TextButton(onPressed: () {  }, child: Text("Resend OTP",style: AppStyle().whiteTextStyle,),),
-                   )
+                   ),
+                    Container(width:MediaQuery.of(context).size.width/1.2 ,
+                      child:  state is OtpValid ?  AppWidgets.buttonWithStateManage(context, state, ): AppWidgets.DisabledbuttonwithStateManage(context, state),
+                    )
+
+                  //  state is OtpValid ?  AppWidgets.buttonWithStateManage(context, state, ): AppWidgets.DisabledbuttonwithStateManage(context, state)
 ]
                     ),
             )

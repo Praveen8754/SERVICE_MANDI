@@ -114,4 +114,56 @@ class HindiStrings extends Strings {
   @override
   // TODO: implement welcometoservicemandi
   String get welcometoservicemandi => throw UnimplementedError();
+
+  @override
+  // TODO: implement login
+  String get login => throw UnimplementedError();
+
+  @override
+  // TODO: implement bunkLocator
+  String get bunkLocator => throw UnimplementedError();
+
+  @override
+  // TODO: implement myVehicles
+  String get myVehicles => throw UnimplementedError();
+
+  @override
+  // TODO: implement powerSolutions
+  String get powerSolutions => throw UnimplementedError();
+
+  @override
+  // TODO: implement referforLoans
+  String get referforLoans => throw UnimplementedError();
+
+  @override
+  // TODO: implement serviceBooking
+  String get serviceBooking => throw UnimplementedError();
+
+  @override
+  // TODO: implement servicesandrepairs
+  String get servicesandrepairs => throw UnimplementedError();
+
+  @override
+  // TODO: implement towingService
+  String get towingService => throw UnimplementedError();
+
+  @override
+  // TODO: implement vehicleInsurance
+  String get vehicleInsurance => throw UnimplementedError();
+
+  @override
+  // TODO: implement wheelAlignment
+  String get wheelAlignment => throw UnimplementedError();
+
+  @override
+  // TODO: implement homeTab
+  String get homeTab => throw UnimplementedError();
+
+  @override
+  // TODO: implement ordersTab
+  String get ordersTab => throw UnimplementedError();
+
+  @override
+  // TODO: implement profileTab
+  String get profileTab => throw UnimplementedError();
 }

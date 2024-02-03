@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gro_stellar_renewed/res/app_context_extension.dart';
 import 'package:gro_stellar_renewed/res/colors/app_colors.dart';
+import 'package:gro_stellar_renewed/res/dimensions/app_dimensions.dart';
 import 'package:gro_stellar_renewed/res/styles/app_styles.dart';
 import 'package:gro_stellar_renewed/ui/otp/bloc/otp_bloc.dart';
 import 'package:gro_stellar_renewed/widgets/app_widgets.dart';
@@ -37,7 +38,7 @@ class OtpScreen extends StatelessWidget {
                       padding: EdgeInsets.all(MediaQuery
                           .of(context)
                           .size
-                          .width / 20),
+                          .width / AppDimension().bigMargin),
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -49,11 +50,11 @@ class OtpScreen extends StatelessWidget {
                                   height: MediaQuery
                                       .of(context)
                                       .size
-                                      .height / 4,
+                                      .height / AppDimension().verySmallMargin,
                                   width: MediaQuery
                                       .of(context)
                                       .size
-                                      .width / 4,
+                                      .width / AppDimension().verySmallMargin,
                                   image:
                                   AssetImage(context.resources.drawable.logobig)),
                             ),
@@ -74,22 +75,21 @@ class OtpScreen extends StatelessWidget {
                                   _isButtonEnabled = false;
                                 }*/
                             ),
-                            SizedBox(height: MediaQuery.of(context).size.height/10,),
+                            SizedBox(height: MediaQuery.of(context).size.height/AppDimension().edgeDefaultMargin,),
           Container(
             child: state is MobileNumberValid ?
 
 
 
-            AppWidgets.buttonWithStateManage(context, state, ):
-            Container(
+            AppWidgets.buttonWithStateManage(context, state, ): AppWidgets.DisabledbuttonwithStateManage(context, state) /*           Container(
               // height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               child: Image(
-                  height: MediaQuery.of(context).size.height/10,
-                  width: MediaQuery.of(context).size.width/10,
+                  height: MediaQuery.of(context).size.height/AppDimension().edgeDefaultMargin,
+                  width: MediaQuery.of(context).size.width/AppDimension().edgeDefaultMargin,
                   image: AssetImage(
                       context.resources.drawable.requestotphide)),
-            ),
+            ),*/
           ),
                         /*   state is MobileNumberValid ? AppWidgets.buttonWithStateManage(context, state, ):
                            Container(

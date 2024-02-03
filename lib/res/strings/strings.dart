@@ -61,4 +61,18 @@ abstract class Strings {
   String get requestotp;
   String get enterthemobilenumber;
   String get welcometoservicemandi;
+  String get login;
+  String get servicesandrepairs;
+  String get serviceBooking;
+  String get wheelAlignment;
+  String get powerSolutions;
+  String get towingService;
+  String get referforLoans;
+  String get vehicleInsurance;
+  String get myVehicles;
+  String get  bunkLocator;
+String get homeTab;
+String get ordersTab;
+String get profileTab;
+
 }

@@ -58,54 +58,60 @@ class AppWidgets {
 
   static buttonWithStateManage(
     BuildContext context,
-    OtpState state,
+    dynamic state,
   ) {
-    bool showoverlay = state is MobileNumberValid ? true : false;
-    return Visibility(
-      visible: showoverlay,
-      child: Container(
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-          color: AppColors().black,
-          border: Border.all(
-            color: AppColors().black, // Border color
-            width: MediaQuery.of(context).size.width / 100, // Border width
-          ),
-          borderRadius: BorderRadius.circular(0),
+
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(
+        color: AppColors().black,
+        border: Border.all(
+          color: AppColors().black, // Border color
+          width: MediaQuery.of(context).size.width / 100, // Border width
         ),
-        child: MaterialButton(
-          onPressed: (state is MobileNumberValid)
-              ? () {
-                  // Handle button press here
-                  print('Button pressed');
-                }
-              : null,
-          child: Text(
-            context.resources.strings!.requestotp,
-            style: TextStyle(color: AppColors().white),
-          ),
+        borderRadius: BorderRadius.circular(0),
+      ),
+      child: MaterialButton(
+        onPressed: (state is MobileNumberValid)
+            ? () {
+                // Handle button press here
+                print('Button pressed');
+              }
+            : null,
+        child: Text(
+          context.resources.strings!.requestotp,
+          style: TextStyle(color: AppColors().white),
         ),
       ),
     );
-    /*{
-      return Container(
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-          color: AppColors().black,
-          border: Border.all(
-            color: AppColors().black, // Border color
-            width: MediaQuery.of(context).size.width / 100, // Border width
-          ),
-          borderRadius: BorderRadius.circular(0),
+
+  }
+
+  static DisabledbuttonwithStateManage( BuildContext context , dynamic state){
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(
+        color: AppColors().grey,
+        border: Border.all(
+          color: AppColors().grey, // Border color
+          width: MediaQuery.of(context).size.width / 100, // Border width
         ),
-        child: Center(
-          child: Text(
-            context.resources.strings!.requestotp,
-            style: TextStyle(color: AppColors().white),
-          ),
+        borderRadius: BorderRadius.circular(0),
+      ),
+      child: MaterialButton(
+        onPressed: (state is MobileNumberValid)
+            ? () {
+          // Handle button press here
+          print('Button pressed');
+        }
+            : null,
+        child: Text(
+          context.resources.strings!.requestotp,
+          style: TextStyle(color: AppColors().white),
         ),
-      );
-    }*/
+      ),
+    );
+
   }
 
 
@@ -121,7 +127,7 @@ class AppWidgets {
   }
 
 
-  static getAppBarWithSingleIcon(
+  static getAppBarWithThreeIcons(
       BuildContext context, String title, Function() callback, Icon iconData) {
     return AppBar(
       backgroundColor: context.resources.color.appBarColor,
@@ -139,10 +145,53 @@ class AppWidgets {
             onTap: callback,
             child: iconData,
           ),
+        ),
+        Padding(
+          padding:
+          EdgeInsets.only(right: context.resources.dimension.defaultMargin),
+          child: GestureDetector(
+            onTap: callback,
+            child: iconData,
+          ),
+        ),
+
+      ],
+    );
+  }
+
+
+
+
+
+  static getAppBarWithSingleIcon(
+      BuildContext context, String title, Function() callback, Icon iconData) {
+    return AppBar(
+      backgroundColor: context.resources.color.appBarColor,
+      iconTheme: context.resources.style.appbarIconTheme,
+      centerTitle: true,
+      title: Text(
+        title,
+        style: context.resources.style.appBarTitleStyle,
+      ),
+      actions: [
+        Padding(
+          padding:
+          EdgeInsets.only(right: context.resources.dimension.defaultMargin),
+          child: GestureDetector(
+            onTap: callback,
+            child: iconData,
+          ),
         )
       ],
     );
   }
+
+
+
+
+
+
+
 
   static getTransparentAppBarWithIcons(
       BuildContext context, String title, Function() callback, Icon iconData) {

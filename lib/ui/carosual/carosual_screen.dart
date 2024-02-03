@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gro_stellar_renewed/res/app_context_extension.dart';
+import 'package:gro_stellar_renewed/res/dimensions/app_dimensions.dart';
 
 import 'bloc/carosual_bloc.dart';
 
@@ -21,12 +22,12 @@ class CarosualScreen extends StatelessWidget {
 
   Widget buildDotIndicator(int index, int currentIndex) {
     return Container(
-      margin: EdgeInsets.all(4),
-      width: currentIndex == index ? 16 : 8,
-      height: 8,
+      margin: EdgeInsets.all(AppDimension().verySmallMargin),
+      width: currentIndex == index ?  AppDimension().highElevation: AppDimension().smallMargin,
+      height: AppDimension().smallMargin,
       decoration: BoxDecoration(
         color: currentIndex == index ? Colors.blue : Colors.grey,
-        borderRadius: BorderRadius.circular(4),
+        borderRadius: BorderRadius.circular(AppDimension().verySmallMargin),
       ),
     );
   }
@@ -85,11 +86,11 @@ class CarosualScreen extends StatelessWidget {
                             MediaQuery.sizeOf(context).height / 6.5,
                             MediaQuery.sizeOf(context).width / 12.5,
                             0),
-                        child: Image.asset(
-                          'assets/images/wel3.png',
-                          height: MediaQuery.sizeOf(context).height / 1.4,
-                          scale: 0.9,
-                        ),
+                        child: Image(
+                            image: AssetImage(
+
+                              context.resources.drawable.wel3,
+                            ))
                       )
                     ]),
                   ),
@@ -98,11 +99,11 @@ class CarosualScreen extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.fromLTRB(
                             0, MediaQuery.sizeOf(context).height / 3.2, 0, 0),
-                        child: Image.asset(
-                          'assets/images/wel4.png',
-                          height: MediaQuery.sizeOf(context).height / 2.5,
-                          scale: 2.5,
-                        ),
+                        child: Image(
+                            image: AssetImage(
+
+                              context.resources.drawable.wel4,
+                            )),
                       )
                     ]),
                   ),
@@ -135,7 +136,7 @@ class CarosualScreen extends StatelessWidget {
               return Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(
-                  4, // Number of carousel items
+                  AppDimension().verySmallMargin as int, // Number of carousel items
                   (index) => buildDotIndicator(index, currentIndex),
                 ),
               );
@@ -150,7 +151,7 @@ class CarosualScreen extends StatelessWidget {
             height: MediaQuery.sizeOf(context).height / 15,
             child: ElevatedButton(
               onPressed: () {},
-              child: Text("Login/Signup"),
+              child: Text(context.resources.strings!.login),
             ),
           ),
         )

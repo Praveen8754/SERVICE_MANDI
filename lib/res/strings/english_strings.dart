@@ -1,3 +1,5 @@
+import 'package:gro_stellar_renewed/ui/hometab/bloc/hometab_bloc.dart';
+
 import 'strings.dart';
 
 class EnglishStrings extends Strings {
@@ -10,10 +12,8 @@ class EnglishStrings extends Strings {
   @override
   String get welcome => "Welcome...";
 
-
   @override
   String get usernameLabel => "Username";
-
 
   @override
   String get tagline => "Freight Exchange Made Better...";
@@ -41,7 +41,6 @@ class EnglishStrings extends Strings {
 
   @override
   String get signInHeader => "Log In Now";
-
 
   @override
   String get emailLabel => "Email";
@@ -84,24 +83,72 @@ class EnglishStrings extends Strings {
 
   @override
   String get version => "v01.2022.01";
+
   @override
   String get letsgetstartedText => "Let's get started.";
+
   @override
   String get selectyourpreferredlanguage => "Select your preferred language.";
+
   @override
   String get english => "English";
+
   @override
   String get hindi => "हिंदी";
+
   @override
   String get thamizh => "தமிழ்";
+
   @override
   String get enteryourmobilenumber => "Enter your mobile number";
+
   @override
   String get requestotp => "Request OTP";
+
   @override
   String get enterthemobilenumber => "Enter the Mobile Number";
+
   @override
   String get welcometoservicemandi => "Welcome to Service Mandi";
+
+  @override
+  String get login => "Login / Signup";
+
+  @override
+  String get serviceBooking => "Service Booking";
+
+  @override
+  String get wheelAlignment => "Wheel Alignment";
+
+  @override
+  String get powerSolutions => "Power Solutions";
+
+  @override
+  String get towingService => "Towing Service";
+
+  @override
+  String get referforLoans => "Refer for Loans";
+
+  @override
+  String get vehicleInsurance => "Vehicle Insurance";
+
+  @override
+  String get myVehicles => "My Vehicles";
+
+  @override
+  String get bunkLocator => "Bunk Locator";
+
+  @override
+  String get servicesandrepairs => "Services & Repairs";
+
+  @override
+  String get homeTab => "Home";
+
+  @override
+  String get ordersTab => "Orders";
+
+  @override
+  String get profileTab => "Profile";
 
 
 }
