@@ -45,4 +45,16 @@ class AppDrawables extends Drawables {
 
   @override
   String get requestotphide => "${imageBasePath}requestotphide.png";
+
+  @override
+  String get servicesrepairss => "${imageBasePath}services&repairss.png";
+
+  @override
+  String get servicesndrepairs => "${imageBasePath}services-&-repairs.png";
+
+  @override
+  String get servicebooking => "${imageBasePath}serviceBooking.png";
+
+  @override
+  String get wheelalignment => "${imageBasePath}wheelAlign.png";
 }

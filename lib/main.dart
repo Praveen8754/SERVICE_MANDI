@@ -63,7 +63,7 @@ class MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: context.resources.color.colorPrimary,
       ),
-      initialRoute: Routes.otpfetchScreen,
+      initialRoute: Routes.hometabScreen,
       onGenerateRoute: RouteGenerator().generateRoute,
       locale: _locale,
       supportedLocales: const [

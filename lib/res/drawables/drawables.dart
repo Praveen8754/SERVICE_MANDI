@@ -13,6 +13,10 @@ abstract class Drawables {
   String get wel4;
   String get logobig;
   String get requestotphide;
+  String get servicesrepairss;
+  String get servicesndrepairs;
+  String get servicebooking;
+  String get wheelalignment;
 
 
   String get icGithub;
