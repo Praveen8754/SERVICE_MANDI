@@ -57,4 +57,10 @@ class AppDrawables extends Drawables {
 
   @override
   String get wheelalignment => "${imageBasePath}wheelAlign.png";
+
+  @override
+  String get powersolutionservice => "${imageBasePath}powerSolutionService.png";
+
+
+
 }

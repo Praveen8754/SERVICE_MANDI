@@ -12,52 +12,6 @@ import '../../res/colors/app_colors.dart';
 class HometabScreen extends StatelessWidget {
   HometabBloc? bloc;
 
-/*  var buttonn = [
-
-  {
-  "img":
-  ,"name":"Service & Repairs
-
-  "
-
-  ,
-},
-{
-"img":
-"name":
-},
-{
-"img":
-"name":
-},
-{
-"img":
-"name":
-},
-{
-"img":
-"name":
-},
-{
-"img":
-"name":
-},
-{
-"img":
-"name":
-},
-{
-"img":
-"name":
-},
-{
-"img":
-"name":
-},
-
-
-]*/
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider<HometabBloc>(
@@ -149,11 +103,39 @@ class HometabScreen extends StatelessWidget {
           children: [
             Row(
               children: [
-                ButtonWidget(index: 1,name:context.resources.strings!.servicesandrepairs, imagee: Image(image: AssetImage(context.resources.drawable.servicesrepairss)),),
-                SizedBox(width: MediaQuery.of(context).size.width/10,),
-                ButtonWidget(index: 2, name: context.resources.strings!.serviceBooking, imagee: Image(image: AssetImage(context.resources.drawable.servicebooking)),),
-                SizedBox(width: MediaQuery.of(context).size.width/10,),
-                ButtonWidget(index: 3, name: context.resources.strings!.wheelAlignment, imagee: Image(image: AssetImage(context.resources.drawable.wheelalignment)),),
+                ButtonWidget(
+                  index: 1,
+                  name: context.resources.strings!.servicesandrepairs,
+                  imagee: Image(
+                      image: AssetImage(
+                          context.resources.drawable.servicesrepairss)),
+                    h:MediaQuery.of(context).size.height/8,
+                    w:MediaQuery.of(context).size.width/10
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width / 10,
+                ),
+                ButtonWidget(
+                  index: 2,
+                  name: context.resources.strings!.serviceBooking,
+                  imagee: Image(
+                      image: AssetImage(
+                          context.resources.drawable.servicebooking)),
+                  h:MediaQuery.of(context).size.height/8,
+                    w:MediaQuery.of(context).size.width/10
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width / 10,
+                ),
+                ButtonWidget(
+                  index: 3,
+                  name: context.resources.strings!.wheelAlignment,
+                  imagee: Image(
+                      image: AssetImage(
+                          context.resources.drawable.wheelalignment)),
+                  h:MediaQuery.of(context).size.height/10,
+                  w:MediaQuery.of(context).size.width/10
+                ),
 
                 /* InkWell(
                 child: SizedBox(
@@ -180,7 +162,99 @@ class HometabScreen extends StatelessWidget {
                 ),
               ),*/
 
-            /*    DecoratedBox(
+                /*    DecoratedBox(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(7),
+                    ),
+                    border: Border(
+                        right: BorderSide(color: Colors.orange),
+                        bottom: BorderSide(color: Colors.orange)),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {},
+                    child: Text('TextButton'),
+                  ),
+                ),
+                DecoratedBox(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(7),
+                    ),
+                    border: Border(
+                        right: BorderSide(color: Colors.orange),
+                        bottom: BorderSide(color: Colors.orange)),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {},
+                    child: Text('TextButton1'),
+                  ),
+                ),*/
+              ],
+            ),
+            SizedBox(height: MediaQuery.of(context).size.height/10,),
+            Row(
+              children: [
+                ButtonWidget(
+                    index: 1,
+                    name: context.resources.strings!.servicesandrepairs,
+                    imagee: Image(
+                        image: AssetImage(
+                            context.resources.drawable.powersolutionservice)),
+                    h:MediaQuery.of(context).size.height/8,
+                    w:MediaQuery.of(context).size.width/10
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width / 10,
+                ),
+                ButtonWidget(
+                    index: 2,
+                    name: context.resources.strings!.serviceBooking,
+                    imagee: Image(
+                        image: AssetImage(
+                            context.resources.drawable.servicebooking)),
+                    h:MediaQuery.of(context).size.height/8,
+                    w:MediaQuery.of(context).size.width/10
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width / 10,
+                ),
+                ButtonWidget(
+                    index: 3,
+                    name: context.resources.strings!.wheelAlignment,
+                    imagee: Image(
+                        image: AssetImage(
+                            context.resources.drawable.wheelalignment)),
+                    h:MediaQuery.of(context).size.height/10,
+                    w:MediaQuery.of(context).size.width/10
+                ),
+
+                /* InkWell(
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width/4,
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(7),
+                      ),
+
+                      border: Border(
+                        right: BorderSide(color: Colors.orange),
+                        bottom: BorderSide(color: Colors.orange)
+                      ),
+                    ),
+                    child: MaterialButton(
+                      onPressed: () {},
+                      child:Image(
+
+                          image: AssetImage(context.resources.drawable.servicesndrepairs))
+                    ),
+                  ),
+                ),
+              ),*/
+
+                /*    DecoratedBox(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(
                       Radius.circular(7),
@@ -221,8 +295,11 @@ class ButtonWidget extends StatelessWidget {
   final int index;
   String name;
   Image imagee;
+  double h,w;
 
-   ButtonWidget({Key? key, required this.index,required this.name,required this.imagee}) : super(key: key);
+  ButtonWidget(
+      {Key? key, required this.index, required this.name, required this.imagee,required this.h,required this.w})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -246,32 +323,22 @@ class ButtonWidget extends StatelessWidget {
         }
       },
       builder: (context, state) {
-        return InkWell(
-            onTap: () {
-              buttonBloc.add(ButtonPressed(index));
-            },
-            splashColor: Colors.orange,
-            child: Column(
-              children: [
-
-
-                Image(
-                    //height: 100,
-                  //  width: 100,
-                    image: AssetImage(imagee)),
-
-
-
-
-
-
-
-
-
-
-                Text('Button $index'),
-              ],
-            ));
+        return Card(
+          child: InkWell(
+              onTap: () {
+                buttonBloc.add(ButtonPressed(index));
+              },
+              splashColor: Colors.orange,
+              child: Column(
+                children: [
+                  Image(
+                      height: 100,
+                        width: 100,
+                      image: imagee.image),
+                  Text('Button $index'),
+                ],
+              )),
+        );
         /* ElevatedButton(
           onPressed: () {
             buttonBloc.add(ButtonPressed(index));
@@ -299,7 +366,6 @@ class FirstPage extends StatelessWidget {
     );
   }
 }
-
 
 class SecondPage extends StatelessWidget {
   @override
