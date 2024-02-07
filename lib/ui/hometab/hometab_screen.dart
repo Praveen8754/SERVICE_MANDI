@@ -122,7 +122,7 @@ class HometabScreen extends StatelessWidget {
                       child: Home(context),
                     ),
                     Tab(
-                      child: Orders(context),
+                      child: Orders(context,allItems),
                     ),
                     /* Tab(
                     child: Profile(),
@@ -262,15 +262,8 @@ class HometabScreen extends StatelessWidget {
         );
   }
 
-  Widget Orders(BuildContext context) {
-
-
-
-
-
-
-
-
+  Widget Orders(BuildContext context,List<String> allitems) {
+/*List<String> allitems;*/
     final OrdertabBloc itemBloc = BlocProvider.of<OrdertabBloc>(context);
     List<String> items = [];
     final TextEditingController _searchController = TextEditingController();
@@ -350,7 +343,15 @@ class HometabScreen extends StatelessWidget {
                   );
                 }
 else{
-                  return Text("data");
+                  return ListView.builder(
+                    itemCount: allitems.length,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        title: Text(allitems[index]),
+                        // Handle onTap if needed
+                      );
+                    },
+                  );
                 }
 
 
