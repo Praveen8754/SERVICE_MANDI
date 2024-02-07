@@ -150,5 +150,9 @@ class EnglishStrings extends Strings {
   @override
   String get profileTab => "Profile";
 
+  @override
+  // TODO: implement servicesndrepairs
+  String get servicesndrepairs => throw UnimplementedError();
+
 
 }

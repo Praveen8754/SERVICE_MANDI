@@ -69,8 +69,8 @@ class CarosualScreen extends StatelessWidget {
                   ),
                   Center(
                     child: Container(
-                      height: MediaQuery.sizeOf(context).height/1.5 ,
-                      width:MediaQuery.sizeOf(context).width/1.3 ,
+                      height: MediaQuery.sizeOf(context).height/2,
+                      width: MediaQuery.sizeOf(context).width / 1.3,
                       child: Image(
                           image: AssetImage(
 
@@ -79,33 +79,26 @@ class CarosualScreen extends StatelessWidget {
                     ),
                   ),
                   Center(
-                    child: Column(children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(
-                            MediaQuery.sizeOf(context).width / 7.5,
-                            MediaQuery.sizeOf(context).height / 6.5,
-                            MediaQuery.sizeOf(context).width / 12.5,
-                            0),
-                        child: Image(
-                            image: AssetImage(
+                    child: Container(
+                      height: MediaQuery.sizeOf(context).height/2,
+                      width: MediaQuery.sizeOf(context).width / 1.3,
+                      child: Image(
+                          image: AssetImage(
 
-                              context.resources.drawable.wel3,
-                            ))
-                      )
-                    ]),
+                            context.resources.drawable.wel3,
+                          )),
+                    ),
                   ),
                   Center(
-                    child: Column(children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(
-                            0, MediaQuery.sizeOf(context).height / 3.2, 0, 0),
-                        child: Image(
-                            image: AssetImage(
+                    child: Container(
+                      height: MediaQuery.sizeOf(context).height/2,
+                      width: MediaQuery.sizeOf(context).width / 1.3,
+                      child: Image(
+                          image: AssetImage(
 
-                              context.resources.drawable.wel4,
-                            )),
-                      )
-                    ]),
+                            context.resources.drawable.wel4,
+                          )),
+                    ),
                   ),
                 ],
                 options: CarouselOptions(

@@ -46,6 +46,9 @@ class AppDrawables extends Drawables {
   @override
   String get requestotphide => "${imageBasePath}requestotphide.png";
 
+
+
+
   @override
   String get servicesrepairss => "${imageBasePath}services&repairss.png";
 
@@ -61,6 +64,15 @@ class AppDrawables extends Drawables {
   @override
   String get powersolutionservice => "${imageBasePath}powerSolutionService.png";
 
+  @override
+  String get towingservice => "${imageBasePath}towingService.png";
 
-
+  @override
+  String get referforloans => "${imageBasePath}Refer_loans.png";
+  @override
+  String get vehicleinsurance => "${imageBasePath}vehicleInsurance.png";
+  @override
+  String get myvehicles => "${imageBasePath}myvehicles.png";
+  @override
+  String get bunklocator => "${imageBasePath}bunklocator.png";
 }

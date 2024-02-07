@@ -63,6 +63,7 @@ abstract class Strings {
   String get welcometoservicemandi;
   String get login;
   String get servicesandrepairs;
+//  String get servicesndrepairs;
   String get serviceBooking;
   String get wheelAlignment;
   String get powerSolutions;

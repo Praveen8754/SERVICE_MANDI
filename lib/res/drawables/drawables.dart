@@ -18,7 +18,11 @@ abstract class Drawables {
   String get servicebooking;
   String get wheelalignment;
   String get powersolutionservice;
-
+String get towingservice;
+String get referforloans;
+String get vehicleinsurance;
+String get myvehicles;
+String get bunklocator;
 
   String get icGithub;
   String get icLinkedIn;

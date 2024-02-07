@@ -15,3 +15,34 @@ class HometabBloc extends Bloc<HometabEvent, HometabState> {
     emit(HometabState(true, event.buttonIndex));
   }
 }
+
+class OrdertabBloc extends Bloc<OrdertabEvent, OrdertabState>{
+  final List<String> allItems;
+  OrdertabBloc(this.allItems): super(OrdertabState()){
+    on<FilterItems> (_filterItems);
+  }
+
+
+
+
+
+
+
+
+
+
+
+  FutureOr<void> _filterItems(event, Emitter<dynamic> emit) {
+    List<String> filteredItems = allItems;
+    if(event.filterText ==null){
+      emit(FilteredItems(filteredItems));
+    }
+    else {
+      List<String> filteredItems = allItems
+          .where((item) =>
+          item.toLowerCase().contains(event.filterText.toLowerCase()))
+          .toList();
+      emit(FilteredItems(filteredItems));
+    }
+  }
+}

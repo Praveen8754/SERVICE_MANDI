@@ -8,3 +8,26 @@ class ButtonPressed extends HometabEvent {
 
   ButtonPressed(this.buttonIndex);
 }
+
+
+abstract class OrdertabEvent{}
+
+
+class ButtonPressedd extends HometabEvent {
+  bool buttonIndex;
+
+  ButtonPressedd(this.buttonIndex);
+}
+
+
+
+
+
+
+
+class FilterItems extends OrdertabEvent {
+  final String filterText;
+
+
+  FilterItems(this.filterText);
+}
