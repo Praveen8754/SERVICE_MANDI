@@ -1,6 +1,6 @@
 # gro_service_mandi
 
-A new Flutter project.
+A partially created flutter application built using bloc architecture .
 
 ## Getting Started
 
